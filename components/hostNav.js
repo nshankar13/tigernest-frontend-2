@@ -28,7 +28,7 @@ const NavHost = () => (
 
     <ul>
       <li>
-        <Link href="https://tiger-nest.herokuapp.com">
+        <Link href="http://ec2-18-218-99-159.us-east-2.compute.amazonaws.com/">
           <a>Home</a>
         </Link>
       </li>
