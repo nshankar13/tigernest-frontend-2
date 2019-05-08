@@ -15,7 +15,7 @@ import Router from 'next/router'
 const database_url = "https://tigernest-backend.herokuapp.com"
 
 //const server_url = "http://localhost:3000"
-const server_url = "https://tiger-nest2.herokuapp.com"
+const server_url = "http://ec2-18-224-19-243.us-east-2.compute.amazonaws.com"
 
 var divStyle = {
   color: 'white'
@@ -434,7 +434,7 @@ class eventListHost extends React.Component {
     <HostNav />
     
     <div className="hero">
-      <center> <h2 style={divStyle}> Your Events</h2> </center>
+      <center> <h2 style={divStyle}> Your Events!</h2> </center>
       <br />
 
 
