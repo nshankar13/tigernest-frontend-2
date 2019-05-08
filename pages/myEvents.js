@@ -249,21 +249,21 @@ class eventList extends React.Component {
             "Content-Type": "application/json"
         }
     });
-    const res2 = await fetch(database_url + '/visitor_pairing/delete_events/' + this.state.current_pairing.event_id, {
+    const res2 = await fetch(database_url + '/visitor_pairing/delete_events/' + this.state.current_event.event_id, {
         method: "DELETE",
         headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
         }
     });
-    const res3 = await fetch(database_url + '/pairing/delete_events/' + this.state.current_pairing.event_id, {
+    const res3 = await fetch(database_url + '/pairing/delete_events/' + this.state.current_event.event_id, {
         method: "DELETE",
         headers: {
             'Accept': 'application/json',
             "Content-Type": "application/json"
         }
     });
-    const res4 = await fetch(database_url + '/eligibility/delete_events/' + this.state.current_pairing.event_id, {
+    const res4 = await fetch(database_url + '/eligibility/delete_events/' + this.state.current_event.event_id, {
         method: "DELETE",
         headers: {
             'Accept': 'application/json',
