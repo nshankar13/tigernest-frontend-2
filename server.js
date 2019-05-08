@@ -83,7 +83,7 @@ app.prepare()
           else res.redirect("/login?redirect=/")
         })        
         server.get('/', function (req, res) {
-            res.redirect("http://ec2-18-224-19-243.us-east-2.compute.amazonaws.com/hostMyEvents")
+            res.redirect("http://ec2-18-218-99-159.us-east-2.compute.amazonaws.com")
         })
 
         server.get('*/bootstrap.css', 
