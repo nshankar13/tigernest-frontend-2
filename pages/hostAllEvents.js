@@ -12,7 +12,7 @@ import Cookies from 'js-cookie';
 import Router from 'next/router'
 
 const database_url = "https://tigernest-backend.herokuapp.com"
-const server_url = "https://tiger-nest2.herokuapp.com"
+const server_url = "http://ec2-18-224-19-243.us-east-2.compute.amazonaws.com"
 
 
 
