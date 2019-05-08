@@ -92,7 +92,7 @@ class eventListHost extends React.Component {
         var dataVisitor = await resVisitor.json()
         dataVisitor = JSON.stringify(dataVisitor)
         dataVisitor = JSON.parse(dataVisitor)
-        visitornames.push(String(dataVisitor['name'] + "\n"))
+        visitornames.push(String(dataVisitor['name'] + ": " + dataVisitor['email'] + "\n"))
       }
   
       //data = JSON.stringify(data);
