@@ -517,13 +517,13 @@ class eventListHost extends React.Component {
           <Col>
           <FormGroup check>
               <Label check>
-                <Input type="radio" name="radio1" id="radio1" value="yes" defaultChecked={this.state.same_gender_yes} />{' '}
+                <Input type="radio" name="radio1" id="radio1" value="yes" defaultChecked={this.state.same_gender_no} />{' '}
                 Yes
               </Label>
             </FormGroup>
             <FormGroup check>
               <Label check>
-                <Input type="radio" name="radio1" id="radio1" value="no" defaultChecked={this.state.same_gender_no} />{' '}
+                <Input type="radio" name="radio1" id="radio1" value="no" defaultChecked={this.state.same_gender_yes} />{' '}
                 No
               </Label>
             </FormGroup>
