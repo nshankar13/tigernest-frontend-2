@@ -267,7 +267,7 @@ class eventListHost extends React.Component {
       return;
     }
 
-    let same_gender = genderVal === "yes" ? true : false;
+    let same_gender = genderVal === "yes" ? false : true;
     //console.log(this.state.visitorEmails)
     let pairingInfo = {
       "host_first_name": document.forms["hostSignupForm"]["firstname"].value,
