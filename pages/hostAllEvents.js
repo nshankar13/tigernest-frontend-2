@@ -5,7 +5,7 @@ import Head from '../components/head'
 import HostNav from '../components/hostNav'
 import fetch from 'isomorphic-unfetch'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, Input, Form, FormText, CustomInput } from 'reactstrap';
-import { Card, CardImg, CardHeader, CardText, CardBody, CardTitle, CardSubtitle, CardDeck, FormGroup, Label} from 'reactstrap';
+import { Card, CardImg, CardHeader, CardText, CardBody, CardTitle, CardSubtitle, CardDeck, FormGroup, Label, ListGroup, ListGroupItem} from 'reactstrap';
 import ReactFileReader from 'react-file-reader';
 import Cookies from 'js-cookie';
 
@@ -253,11 +253,16 @@ class eventListHost extends React.Component {
      let start_dates = []
      let start_times = []
      let events = []
+     let hosts_events = []
 
      for (let i = 0; i < data.length; i++)
      {
       if (!eventsHost.includes(data[i]['event_id']) && (data[i]['event_stage'] == 0 || data[i]['event_stage'] == 1))
         events.push(JSON.stringify(data[i]));
+      else if (eventsHost.includes(data[i]['event_id']) && (data[i]['event_stage'] == 0 || data[i]['event_stage'] == 1))
+      {
+        hosts_events.push(JSON.stringify(data[i]));
+      }
      }
 
      return {
@@ -272,6 +277,7 @@ class eventListHost extends React.Component {
       start_dates: start_dates,
       start_times: start_times,
       events:events,
+      hosts_events:hosts_events,
       data: res1.data
      }
 
@@ -394,7 +400,13 @@ class eventListHost extends React.Component {
           </ModalFooter>
       </Modal>
 
-    
+    <ListGroup>
+         {this.props.hosts_events.map((value, index) => {
+          let jsonVal = JSON.parse(value)
+          return <ListGroupItem key={index}> <Link href="/hostMyEvents"> <a> {jsonVal['name']} </a> </Link> </ListGroupItem>
+  
+        })}
+      </ListGroup>
 
       <CardDeck>
         {this.props.events.map((value, index) => {
@@ -419,6 +431,7 @@ class eventListHost extends React.Component {
   
         })}
         </CardDeck>
+
     </div>
 <style jsx>{`
       .hero {
