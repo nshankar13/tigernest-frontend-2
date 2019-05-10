@@ -168,7 +168,8 @@ class eventListHost extends React.Component {
 
 
     this.addHostToggle();
-    this.refreshPage();
+    //this.refreshPage();
+    Router.push("/hostMyEvents")
     //this.getInitialProps();
   }
   handleFiles = files => {
@@ -400,13 +401,18 @@ class eventListHost extends React.Component {
           </ModalFooter>
       </Modal>
 
+    {/*<a style={divStyle}> 
+
     <ListGroup>
          {this.props.hosts_events.map((value, index) => {
+          <ListGroupItem active tag="a" href="#" action>Cras justo odio</ListGroupItem>
           let jsonVal = JSON.parse(value)
           return <div> <ListGroupItem key={index}>  <a href="http://ec2-18-224-19-243.us-east-2.compute.amazonaws.com/hostMyEvents"> {jsonVal['name']} </a>  </ListGroupItem> </div>
   
         })}
       </ListGroup>
+
+      <br /> */}
 
       <CardDeck>
         {this.props.events.map((value, index) => {
