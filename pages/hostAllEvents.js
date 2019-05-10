@@ -403,7 +403,7 @@ class eventListHost extends React.Component {
     <ListGroup>
          {this.props.hosts_events.map((value, index) => {
           let jsonVal = JSON.parse(value)
-          return <ListGroupItem key={index}> <Link href="/hostMyEvents"> <a> {jsonVal['name']} </a> </Link> </ListGroupItem>
+          return <div> <ListGroupItem key={index}> <Link href="/hostMyEvents"> <a> {jsonVal['name']} </a> </Link> </ListGroupItem> </div>
   
         })}
       </ListGroup>
